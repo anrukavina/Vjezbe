@@ -9,7 +9,7 @@ use salon_uljepsavanja;
 create table osoba (
     ime     varchar(50),
     prezime varchar(50),
-    oib     varchar(50)
+    oib     char(11)
 );
 
 create table djelatnica (
