@@ -37,3 +37,9 @@ create table briga_o_sticeniku (
     djelatnik int not null,
     sticenik int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table prostor add foreign key (sticenik) references sticenik(sifra);
+alter table briga_o_sticeniku add foreign key (djelatnik) references djelatnik(sifra);
+alter table briga_o_sticeniku add foreign key (sticenik) references sticenik(sifra);
