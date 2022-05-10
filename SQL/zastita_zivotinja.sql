@@ -7,24 +7,33 @@ create database zastita_zivotinja;
 use zastita_zivotinja;
 
 create table djelatnik (
-    ime     varchar(50),
-    prezime varchar(50),
-    placa   varchar(50),
+    sifra   int not null primary key auto_increment,
+    ime     varchar(50) not null,
+    prezime varchar(50) not null,
+    placa   decimal(18,2),
     oib     char(11)
 );
 
 create table sticenik (
-    vrsta   varchar(50),
+    sifra int not null primary key auto_increment,
+    ime     varchar(50) not null,
+    vrsta   varchar(50) not null,
     pasmina varchar(50),
     boja    varchar(50),
-    dob     varchar(50),
-    ime     varchar(50)
+    dob     int
 );
 
 create table prostor (
+    sifra int not null primary key auto_increment,
     tip     varchar(50),
-    duljina varchar(50),
-    sirina  varchar(50),
-    visina  varchar(50)
+    duljina decimal(18,2),
+    sirina  decimal(18,2),
+    visina  decimal(18,2),
+    sticenik int not null
 );
 
+create table briga_o_sticeniku (
+    sifra int not null primary key auto_increment,
+    djelatnik int not null,
+    sticenik int not null
+);
