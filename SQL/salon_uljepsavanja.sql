@@ -41,3 +41,12 @@ create table narudzba (
     usluga int not null,
     datum_narudzbe datetime
 );
+
+# definiranje vanjskih ključeva
+
+alter table djelatnica add foreign key (osoba) references osoba(sifra);
+alter table korisnik add foreign key (osoba) references osoba(sifra);
+
+alter table narudzba add foreign key (djelatnica) references djelatnica(sifra);
+alter table narudzba add foreign key (korisnik) references korisnik(sifra);
+alter table narudzba add foreign key (usluga) references usluga(sifra);
