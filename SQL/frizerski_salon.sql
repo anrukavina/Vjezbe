@@ -23,8 +23,7 @@ create table djelatnica (
 
 create table korisnik (
     sifra       int not null primary key auto_increment,
-    osoba       int not null,
-    br_narudzbe varchar(10)
+    osoba       int not null
 );
 
 create table usluga (
@@ -34,3 +33,19 @@ create table usluga (
     kolicina int
 );
 
+create table narudzba (
+    sifra int not null primary key auto_increment,
+    datum_narudzbe datetime,
+    djelatnica int not null,
+    korisnik int not null,
+    usluga int not null
+);
+
+# definiranje vanjskih ključeva
+
+alter table djelatnica add foreign key (osoba) references osoba(sifra);
+alter table korisnik add foreign key (osoba) references osoba(sifra);
+
+alter table narudzba add foreign key (djelatnica) references djelatnica(sifra);
+alter table narudzba add foreign key (korisnik) references korisnik(sifra);
+alter table narudzba add foreign key (usluga) references usluga(sifra);
