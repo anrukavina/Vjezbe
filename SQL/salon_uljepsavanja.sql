@@ -7,25 +7,37 @@ create database salon_uljepsavanja;
 use salon_uljepsavanja;
 
 create table osoba (
-    ime     varchar(50),
-    prezime varchar(50),
-    oib     char(11)
+    sifra int not null primary key auto_increment,
+    ime         varchar(50) not null,
+    prezime     varchar(50) not null,
+    email       varchar(100),
+    br_telefona varchar(50),
+    oib         char(11)
 );
 
 create table djelatnica (
-    osoba       varchar(50),
-    br_telefona varchar(50)
+    sifra int not null primary key auto_increment,
+    osoba int not null,
+    iban  varchar(50)
 );
 
 create table korisnik (
-    osoba varchar(50),
-    spol  varchar(50),
-    email varchar(50)
+    sifra int not null primary key auto_increment,
+    osoba int not null 
 );
 
 create table usluga (
-    naziv         varchar(50),
-    cijena        varchar(50),
-    kolicina      varchar(50),
-    datum_posjeta varchar(50)
+    sifra int not null primary key auto_increment,
+    naziv         varchar(20),
+    cijena        decimal(18,2),
+    kolicina      int,
+    datum_posjeta datetime
+);
+
+create table narudzba (
+    sifra int not null primary key auto_increment,
+    djelatnica int not null,
+    korisnik int not null,
+    usluga int not null,
+    datum_narudzbe datetime
 );
