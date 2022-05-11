@@ -15,7 +15,7 @@ create table djelatnik (
 );
 
 create table sticenik (
-    sifra int not null primary key auto_increment,
+    sifra   int not null primary key auto_increment,
     ime     varchar(50) not null,
     vrsta   varchar(50) not null,
     pasmina varchar(50),
@@ -24,18 +24,18 @@ create table sticenik (
 );
 
 create table prostor (
-    sifra int not null primary key auto_increment,
-    tip     varchar(50),
-    duljina decimal(18,2),
-    sirina  decimal(18,2),
-    visina  decimal(18,2),
+    sifra    int not null primary key auto_increment,
+    tip      varchar(50),
+    duljina  decimal(18,2),
+    sirina   decimal(18,2),
+    visina   decimal(18,2),
     sticenik int not null
 );
 
 create table briga_o_sticeniku (
-    sifra int not null primary key auto_increment,
+    sifra     int not null primary key auto_increment,
     djelatnik int not null,
-    sticenik int not null
+    sticenik  int not null
 );
 
 # definiranje vanjskih ključeva

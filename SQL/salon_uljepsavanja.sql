@@ -7,7 +7,7 @@ create database salon_uljepsavanja;
 use salon_uljepsavanja;
 
 create table osoba (
-    sifra int not null primary key auto_increment,
+    sifra       int not null primary key auto_increment,
     ime         varchar(50) not null,
     prezime     varchar(50) not null,
     email       varchar(100),
@@ -27,7 +27,7 @@ create table korisnik (
 );
 
 create table usluga (
-    sifra int not null primary key auto_increment,
+    sifra         int not null primary key auto_increment,
     naziv         varchar(20),
     cijena        decimal(18,2),
     kolicina      int,
@@ -35,10 +35,10 @@ create table usluga (
 );
 
 create table narudzba (
-    sifra int not null primary key auto_increment,
-    djelatnica int not null,
-    korisnik int not null,
-    usluga int not null,
+    sifra          int not null primary key auto_increment,
+    djelatnica     int not null,
+    korisnik       int not null,
+    usluga         int not null,
     datum_narudzbe datetime
 );
 

@@ -7,29 +7,41 @@ create database muzej;
 use muzej;
 
 create table izlozba (
-    naziv       varchar(50),
-    oblik       varchar(50),
-    trajanje    varchar(50),
-    organizator varchar(50)
+    sifra           int not null primary key auto_increment,
+    naziv           varchar(50),
+    oblik           varchar(50),
+    datum_pocetka   datetime,
+    datum_zavrsetka datetime,
+    djelo           int not null,
+    kustos          int not null,
+    sponzor         int not null
 );
 
 create table djelo (
+    sifra int not null primary key auto_increment,
     naziv varchar(50),
     vrsta varchar(50),
     autor varchar(50)
 );
 
-create table kustos (
+create table osoba (
+    sifra   int not null primary key auto_increment,
     ime     varchar(50),
     prezime varchar(50),
-    placa   varchar(50),
-    titula  varchar(50)
+    oib     char(11)
+);
+
+create table kustos (
+    sifra   int not null primary key auto_increment,
+    osoba   int not null,
+    osoba   int not null,
+    placa   decimal(18,2),
+    titula  varchar(100)
 );
 
 create table sponzor (
-    ime            varchar(50),
-    prezime        varchar(50),
-    iznos_donacije varchar(50),
-    tvrtka         varchar (50)
+    sifra          int not null primary key auto_increment,
+    osoba          int not null,
+    iznos_donacije decimal(18,2),
+    tvrtka         varchar(50)
 );
-

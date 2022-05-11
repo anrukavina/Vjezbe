@@ -22,8 +22,8 @@ create table djelatnica (
 );
 
 create table korisnik (
-    sifra       int not null primary key auto_increment,
-    osoba       int not null
+    sifra int not null primary key auto_increment,
+    osoba int not null
 );
 
 create table usluga (
@@ -34,11 +34,11 @@ create table usluga (
 );
 
 create table narudzba (
-    sifra int not null primary key auto_increment,
+    sifra          int not null primary key auto_increment,
     datum_narudzbe datetime,
-    djelatnica int not null,
-    korisnik int not null,
-    usluga int not null
+    djelatnica     int not null,
+    korisnik       int not null,
+    usluga         int not null
 );
 
 # definiranje vanjskih ključeva
