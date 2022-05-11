@@ -34,7 +34,6 @@ create table osoba (
 create table kustos (
     sifra   int not null primary key auto_increment,
     osoba   int not null,
-    osoba   int not null,
     placa   decimal(18,2),
     titula  varchar(100)
 );
@@ -45,3 +44,12 @@ create table sponzor (
     iznos_donacije decimal(18,2),
     tvrtka         varchar(50)
 );
+
+# definiranje vanjskih ključeva
+
+alter table kustos add foreign key (osoba) references osoba(sifra);
+alter table sponzor add foreign key (osoba) references osoba(sifra);
+
+alter table izlozba add foreign key (djelo) references djelo(sifra);
+alter table izlozba add foreign key (kustos) references kustos(sifra);
+alter table izlozba add foreign key (sponzor) references sponzor(sifra);
