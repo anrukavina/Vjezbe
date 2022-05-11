@@ -7,30 +7,42 @@ create database postolar;
 use postolar;
 
 create table osoba (
-    ime     varchar(50),
-    prezime varchar(50),
+    sifra   int not null primary key auto_increment,
+    ime     varchar(50) not null,
+    prezime varchar(50) not null,
     oib     char(11)
 );
 
 create table postolar (
-    osoba       varchar(50),
+    sifra       int not null primary key auto_increment,
+    osoba       int not null,
     br_telefona varchar(50)
 );
 
+create table segrt (
+    sifra int not null primary key auto_increment,
+    osoba int not null,
+    placa decimal(18,2)
+);
+
+create table korisnik (
+    sifra int not null primary key auto_increment,
+    osoba int not null
+);
+
 create table obuca (
+    sifra      int not null primary key auto_increment,
     vrsta      varchar(50),
     proizvodac varchar(50),
-    velicina   varchar(50),
-    boja       varchar(50)
+    velicina   decimal(18,2),
+    boja       varchar(20)
 );
 
 create table popravak (
-    vrsta    varchar(50),
-    cijena   varchar(50),
-    trajanje varchar(50)
+    sifra             int not null primary key auto_increment,
+    vrsta             varchar(50),
+    cijena            decimal(18,2),
+    datum_ostavljanja datetime,
+    datum_preuzimanja datetime 
 );
 
-create table segrt (
-    osoba varchar(50),
-    placa varchar(50)
-);

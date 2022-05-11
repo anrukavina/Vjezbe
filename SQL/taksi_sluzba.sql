@@ -8,8 +8,8 @@ use taksi_sluzba;
 
 create table osoba (
     sifra   int not null primary key auto_increment,
-    ime     varchar(50),
-    prezime varchar(50),
+    ime     varchar(50) not null,
+    prezime varchar(50) not null,
     oib     char(11)
 );
 

@@ -8,7 +8,7 @@ use muzej;
 
 create table izlozba (
     sifra           int not null primary key auto_increment,
-    naziv           varchar(50),
+    naziv           varchar(50) not null,
     oblik           varchar(50),
     datum_pocetka   datetime,
     datum_zavrsetka datetime,
@@ -21,13 +21,13 @@ create table djelo (
     sifra int not null primary key auto_increment,
     naziv varchar(50),
     vrsta varchar(50),
-    autor varchar(50)
+    autor varchar(50) not null
 );
 
 create table osoba (
     sifra   int not null primary key auto_increment,
-    ime     varchar(50),
-    prezime varchar(50),
+    ime     varchar(50) not null,
+    prezime varchar(50) not null,
     oib     char(11)
 );
 
