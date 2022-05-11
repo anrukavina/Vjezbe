@@ -11,7 +11,9 @@ create table odgojna_skupina (
     naziv         varchar(50),
     dobna_granica int,
     broj_djece    int,
-    vrsta         varchar(50)
+    vrsta         varchar(50),
+    dijete        int not null,
+    odgajateljica int not null
 );
 
 create table osoba (
@@ -34,3 +36,11 @@ create table odgajateljica (
     osoba          int not null,
     strucna_sprema varchar(50)
 );
+
+# definiranje vanjskih ključeva
+
+alter table odgajateljica add foreign key (osoba) references osoba(sifra);
+alter table dijete add foreign key (osoba) references osoba(sifra);
+
+alter table odgojna_skupina add foreign key (odgajateljica) references odgajateljica(sifra);
+alter table odgojna_skupina add foreign key (dijete) references dijete(sifra);
