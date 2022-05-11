@@ -17,7 +17,7 @@ create table vozac (
     sifra  int not null primary key auto_increment,
     osoba  int not null,
     vozilo int not null,
-    iban   varchar(50),
+    iban   varchar(50)
 );
 
 create table putnik (
@@ -41,3 +41,13 @@ create table voznja (
     vozac            int not null,
     putnik           int not null 
 );
+
+# definiranje vanjskih ključeva
+
+alter table vozac add foreign key (osoba) references osoba(sifra);
+alter table vozac add foreign key (vozilo) references vozilo(sifra);
+
+alter table putnik add foreign key (osoba) references osoba(sifra);
+
+alter table voznja add foreign key (vozac) references vozac(sifra);
+alter table voznja add foreign key (putnik) references putnik(sifra);
