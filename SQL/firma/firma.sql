@@ -1,6 +1,6 @@
 # baza podataka za firmu
 # naredba za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\firma.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\firma\firma.sql
 
 drop database if exists firma;
 create database firma default charset utf8mb4;
@@ -33,33 +33,39 @@ create table sudjeluje (
 alter table sudjeluje add foreign key (projekt) references projekt(sifra);
 alter table sudjeluje add foreign key (programer) references programer(sifra);
 
-# unos podataka
+# unos podataka u tablicu projekt
 
-insert into projekt (naziv)
-values ('Miško');
+insert into projekt (naziv,cijena)
+values ('Aplikacija','10000kn');
+insert into projekt (naziv,cijena)
+values ('Web-shop',15000);
+insert into projekt (naziv,cijena)
+values ('Web-stranica',20000);
+insert into projekt (naziv,cijena)
+values('Tečaj programiranja',7500);
 
-insert into projekt (naziv)
-values ('Miška');
 
-insert into programer (ime,prezime)
-values ('Antonio','Majer');
+# unos podataka u tablicu programer (ime,prezime)
 
-insert into programer (ime,prezime)
-values ('Ante','Bikić');
+insert into programer (ime,prezime,datum_rodenja,placa)
+values ('Antonio','Majer','1991-01-01',10000);
+insert into programer (ime,prezime,datum_rodenja,placa)
+values ('Ante','Bikić','1992-01-02',9500);
+insert into programer (ime,prezime,datum_rodenja,placa)
+values ('Antonio','Vuletić','1993-01-03',9000);
+insert into programer (ime,prezime,datum_rodenja,placa)
+values ('Antun','Rukavina','1994-01-04',8500);
 
-insert into programer (ime,prezime)
-values ('Antonio','Vuletić');
 
-insert into programer (ime,prezime)
-values ('Antun','Rukavina');
+# unos podataka u tablicu sudjeluje
 
-insert into sudjeluje (projekt,programer,datum_pocetka)
-values (1,1,'2022-05-11');
-insert into sudjeluje (projekt,programer,datum_pocetka)
-values (1,4,'2022-05-11');
-insert into sudjeluje (projekt,programer,datum_pocetka)
-values (2,2,'2022-05-11');
-insert into sudjeluje (projekt,programer,datum_pocetka)
-values (2,3,'2022-05-11');
-insert into sudjeluje (projekt,programer,datum_pocetka)
-values (2,4,'2022-05-11');
+insert into sudjeluje (projekt,programer,datum_pocetka,datum_kraja)
+values (1,1,'2022-05-11','2022-06-10');
+insert into sudjeluje (projekt,programer,datum_pocetka,datum_kraja)
+values (1,4,'2022-05-11','2022-06-10');
+insert into sudjeluje (projekt,programer,datum_pocetka,datum_kraja)
+values (2,2,'2022-05-11','2022-06-10');
+insert into sudjeluje (projekt,programer,datum_pocetka,datum_kraja)
+values (2,3,'2022-05-11','2022-06-10');
+insert into sudjeluje (projekt,programer,datum_pocetka,datum_kraja)
+values (2,4,'2022-05-11','2022-06-10');
