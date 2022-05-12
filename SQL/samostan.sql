@@ -16,17 +16,16 @@ create table osoba (
 create table svecenik (
     sifra              int not null primary key auto_increment,
     osoba              int not null,
-    posao              int not null,
-    nadredeni_svecenik int not null
+    posao              int not null
 );
 
 create table posao (
-    sifra             int not null primary key auto_increment,
-    naziv             varchar(50),
-    vrsta             varchar(50),
-    vrijeme_pocetka   datetime,
-    vrijeme_zavrsetka datetime,
-    svecenik          int not null,
+    sifra              int not null primary key auto_increment,
+    naziv              varchar(50),
+    vrsta              varchar(50),
+    vrijeme_pocetka    datetime,
+    vrijeme_zavrsetka  datetime,
+    svecenik           int not null,
     nadredeni_svecenik int not null
 );
 
@@ -38,3 +37,12 @@ create table nadredeni_svecenik (
 );
 
 # definiranje vanjskih ključeva
+
+alter table svecenik add foreign key (osoba) references osoba(sifra);
+alter table svecenik add foreign key (posao) references posao(sifra);
+alter table nadredeni_svecenik add foreign key (osoba) references osoba(sifra);
+
+alter table posao add foreign key (svecenik) references svecenik(sifra);
+alter table posao add foreign key (nadredeni_svecenik) references nadredeni_svecenik(sifra);
+
+alter table nadredeni_svecenik add foreign key (podredeni_svecenik) references svecenik(sifra);
