@@ -33,8 +33,21 @@ create table medicinska_sestra (
 );
 
 create table lijecenje (
-    sifra    int not null primary key auto_increment,
-    pocetak  datetime,
-    kraj     datetime,
-    izljecen boolean    
+    sifra             int not null primary key auto_increment,
+    pocetak           datetime,
+    kraj              datetime,
+    izljecen          boolean,
+    doktor            int not null,
+    pacijent          int not null,
+    medicinska_sestra int not null    
 );
+
+# definiranje vanjskih ključeva
+
+alter table doktor add foreign key (osoba) references osoba(sifra);
+alter table pacijent add foreign key (osoba) references osoba(sifra);
+alter table medicinska_sestra add foreign key (osoba) references osoba(sifra);
+
+alter table lijecenje add foreign key (doktor) references doktor(sifra);
+alter table lijecenje add foreign key (pacijent) references pacijent(sifra);
+alter table lijecenje add foreign key (medicinska_sestra) references medicinska_sestra(sifra);
