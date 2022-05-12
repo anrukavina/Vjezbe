@@ -7,7 +7,7 @@ create database urar_silvija default charset utf8mb4;
 use urar_silvija;
 
 create table osoba (
-    sifra   int not null primary key auto_increment;
+    sifra   int not null primary key auto_increment,
     ime     varchar(50) not null,
     prezime varchar(50) not null,
     oib     char(11)
@@ -38,3 +38,24 @@ create table sat (
     boja       varchar(50)
 );
 
+create table popravak (
+    sifra             int not null primary key auto_increment,
+    datum_primitka    datetime,
+    datum_preuzimanja datetime,
+    cijena            decimal(18,2),
+    sat               int not null,
+    urar              int not null,
+    segrt             int not null
+);
+
+# definiranje vanjskih ključeva
+
+alter table urar add foreign key (osoba) references osoba(sifra);
+alter table korisnik add foreign key (osoba) references osoba(sifra);
+alter table segrt add foreign key (osoba) references osoba(sifra);
+
+alter table korisnik add foreign key (sat) references sat(sifra);
+
+alter table popravak add foreign key (sat) references sat(sifra);
+alter table popravak add foreign key (urar) references urar(sifra);
+alter table popravak add foreign key (segrt) references segrt(sifra);
