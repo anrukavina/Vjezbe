@@ -1,10 +1,10 @@
 # unijeti 3 županije, 6 općina, 12 mjesta, 3 župana
 # promijeniti 5 mjesta
 # obrisati 2 općine
-# C:\xampp\mysql\bin\mysql -uroot < --default_character_set=utf8 C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\zadatak1\zadatak1.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\zadatak1\zadatak1.sql
 
-drop database if exists zadatak1 default charset utf8mb4;
-create database zadatak1;
+drop database if exists zadatak1;
+create database zadatak1 default charset utf8mb4;
 use zadatak1;
 
 create table zupanija (
@@ -15,8 +15,8 @@ create table zupanija (
 
 create table zupan (
     sifra   int not null primary key auto_increment,
-    ime     varchar(50) int not null,
-    prezime varchar(50) int not null
+    ime     varchar(50) not null,
+    prezime varchar(50) not null
 );
 
 create table opcina (
@@ -26,7 +26,13 @@ create table opcina (
 );
 
 create table mjesto (
-    sifra  int not nul primary key auto_increment,
+    sifra  int not null primary key auto_increment,
     opcina int not null,
     naziv  varchar(50)
 );
+
+# definiranje vanjskih ključeva
+
+alter table zupanija add foreign key (zupan) references zupan(sifra);
+alter table opcina add foreign key (zupanija) references zupanija(sifra);
+alter table mjesto add foreign key (opcina) references opcina(sifra);
