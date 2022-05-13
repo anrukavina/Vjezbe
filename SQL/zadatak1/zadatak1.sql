@@ -99,4 +99,10 @@ values ('Cret Bizovački',6);
 insert into mjesto (naziv,opcina)
 values ('Samatovci',6);
 
+# promjena 5 mjesta
 
+update mjesto set naziv='Sulkovci' where sifra=2;
+update mjesto set naziv='Cerovac' where sifra=4;
+update mjesto set naziv='Budimci' where sifra=9;
+update mjesto set naziv='Brođanci' where sifra=11;
+update mjesto set naziv='Selci' where sifra=12;
