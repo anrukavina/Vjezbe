@@ -1,9 +1,9 @@
 # baza podataka za udrugu za zastitu zivotinja
 # naredba za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\zastita_zivotinja.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\zastita_zivotinja.sql
 
 drop database if exists zastita_zivotinja;
-create database zastita_zivotinja;
+create database zastita_zivotinja default charset utf8mb4;
 use zastita_zivotinja;
 
 create table djelatnik (

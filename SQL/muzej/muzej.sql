@@ -1,9 +1,9 @@
 # baza podataka za muzej
 # naredba za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\muzej.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\muzej.sql
 
 drop database if exists muzej;
-create database muzej;
+create database muzej default charset utf8mb4;
 use muzej;
 
 create table izlozba (

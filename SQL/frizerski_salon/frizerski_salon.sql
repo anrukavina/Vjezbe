@@ -1,9 +1,9 @@
 # baza podataka za frizerski salon
 # naredba za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\frizerski_salon.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\frizerski_salon.sql
 
 drop database if exists frizerski_salon;
-create database frizerski_salon;
+create database frizerski_salon default charset utf8mb4;
 use frizerski_salon;
 
 create table osoba (

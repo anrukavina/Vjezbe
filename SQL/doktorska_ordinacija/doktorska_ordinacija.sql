@@ -3,7 +3,7 @@
 # C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\doktorska_ordinacija.sql
 
 drop database if exists doktorska_ordinacija;
-create database doktorska_ordinacija;
+create database doktorska_ordinacija default charset utf8mb4;
 use doktorska_ordinacija;
 
 create table osoba (

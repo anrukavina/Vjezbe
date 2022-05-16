@@ -1,9 +1,9 @@
 # baza podataka za taksi sluzbu   
 # nareda za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\taksi_sluzba.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\taksi_sluzba.sql
 
 drop database if exists taksi_sluzba;
-create database taksi_sluzba;
+create database taksi_sluzba default charset utf8mb4;
 use taksi_sluzba;
 
 create table osoba (

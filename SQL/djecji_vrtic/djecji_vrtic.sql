@@ -1,9 +1,9 @@
 # baza podataka za djecji vrtic
 # naredba za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\djecji_vrtic.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\djecji_vrtic.sql
 
 drop database if exists djecji_vrtic;
-create database djecji_vrtic;
+create database djecji_vrtic default charset utf8mb4;
 use djecji_vrtic;
 
 create table odgojna_skupina (

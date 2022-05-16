@@ -1,9 +1,9 @@
 # baza podataka za postolara
 # naredba za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\postolar.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\postolar.sql
  
 drop database if exists postolar;
-create database postolar;
+create database postolar default charset utf8mb4;
 use postolar;
 
 create table osoba (

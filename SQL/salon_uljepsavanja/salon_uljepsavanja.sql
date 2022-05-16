@@ -1,9 +1,9 @@
 # baza podataka za salon za uljepsavanje
 # naredba za izvođenje
-# C:\xampp\mysql\bin\mysql -uroot < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\salon_uljepsavanja.sql
+# C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\antun\OneDrive\Dokumenti\GitHub\Vjezbe\SQL\salon_uljepsavanja.sql
 
 drop database if exists salon_uljepsavanja;
-create database salon_uljepsavanja;
+create database salon_uljepsavanja default charset utf8mb4;
 use salon_uljepsavanja;
 
 create table osoba (
