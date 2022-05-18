@@ -29,3 +29,8 @@ create table prijava (
     student           int not null,
     rok               int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table prijava add foreign key (student) references student(sifra);
+alter table prijava add foreign key (rok) references rok(sifra);
