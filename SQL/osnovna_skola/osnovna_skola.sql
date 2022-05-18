@@ -14,8 +14,6 @@ create table osoba (
 );
 create table dijete (
     sifra   int not null primary key auto_increment,
-    ime     varchar(50) not null,
-    prezime varchar(50) not null,
     dob     int,
     osoba   int not null
 );
@@ -24,12 +22,14 @@ create table radionica (
     sifra           int not null primary key auto_increment,
     naziv           varchar(100),
     datum_pocetka   datetime,
-    datum_zavrsetka datetime
+    datum_zavrsetka datetime,
+    uciteljica      int not null
 );
 
 create table uciteljica (
     sifra int not null primary key auto_increment,
-    placa decimal(18,2)
+    placa decimal(18,2),
+    osoba int not null
 );
 
 create table sudjelovanje (
@@ -37,3 +37,13 @@ create table sudjelovanje (
     dijete    int not null,
     radionica int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table dijete add foreign key (osoba) references osoba(sifra);
+alter table uciteljica add foreign key (osoba) references osoba(sifra);
+
+alter table sudjelovanje add foreign key (dijete) references dijete(sifra);
+alter table sudjelovanje add foreign key (radionica) references radionica(sifra);
+
+alter table radionica add foreign key (uciteljica) references uciteljica(sifra);
