@@ -9,7 +9,8 @@ use trgovacki_centar;
 create table trgovina (
     sifra         int not null primary key auto_increment,
     naziv         varchar(50) not null,
-    broj_trgovine int
+    broj_trgovine int,
+    sef           int not null
 );
 
 create table osoba (
@@ -36,3 +37,4 @@ create table posao (
 alter table sef add foreign key (osoba) references osoba(sifra);
 alter table posao add foreign key (trgovina) references trgovina(sifra);
 alter table posao add foreign key (osoba) references osoba(sifra);
+alter table trgovina add foreign key (sef) references sef(sifra);
