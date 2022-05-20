@@ -33,6 +33,11 @@ create table profesor (
 create table nastava (
     sifra  int not null primary key auto_increment,
     razred int not null,
-    ucenik int not null
+    profesor int not null
 );
 
+# definiranje vanjskih ključeva
+
+alter table ucenik add foreign key (razred) references razred(sifra);
+alter table nastava add foreign key (razred) references razred(sifra);
+alter table nastava add foreign key (profesor) references profesor(sifra);
