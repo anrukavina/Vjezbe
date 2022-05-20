@@ -30,3 +30,9 @@ create table posao (
     trgovina int not null,
     osoba    int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table sef add foreign key (osoba) references osoba(sifra);
+alter table posao add foreign key (trgovina) references trgovina(sifra);
+alter table posao add foreign key (osoba) references osoba(sifra);
