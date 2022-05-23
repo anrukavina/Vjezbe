@@ -39,3 +39,10 @@ create table narudzba (
     pice  int not null,
     kolicina int
 );
+
+# definiranje vanjskih ključeva
+
+alter table jelovnik add foreign key (kategorija) references kategorija(sifra);
+alter table jelo add foreign key (kategorija) references kategorija(sifra);
+alter table narudzba add foreign key (jelo) references jelo(sifra);
+alter table narudzba add foreign key (pice) references pice(sifra);
