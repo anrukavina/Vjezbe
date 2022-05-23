@@ -32,3 +32,9 @@ create table proizvodnja (
     proizvod int not null,
     sirovina int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table proizvod add foreign key (djelatnik) references djelatnik(sifra);
+alter table proizvodnja add foreign key (proizvod) references proizvod(sifra);
+alter table proizvodnja add foreign key (sirovina) references sirovina(sifra);
