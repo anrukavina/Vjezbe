@@ -30,3 +30,9 @@ create table izdavanje (
     nakladnik int not null,
     djelo int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table nakladnik add foreign key (mjesto) references mjesto(sifra);
+alter table izdavanje add foreign key (nakladnik) references nakladnik(sifra);
+alter table izdavanje add foreign key (djelo) references djelo(sifra);
