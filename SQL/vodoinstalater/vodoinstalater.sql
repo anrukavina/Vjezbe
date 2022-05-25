@@ -40,3 +40,10 @@ create table segrt (
     prezime varchar(50),
     placa   decimal(18,2)
 );
+
+# definiranje vanjskih ključeva
+
+alter table popravak add foreign key (vodoinstalater) references vodoinstalater(sifra);
+alter table popravak add foreign key (šegrt) references šegrt(sifra);
+alter table popravak_kvar add foreign key (popravak) references popravak(sifra);
+alter table popravak_kvar add foreign key (kvar) references kvar(sifra);
