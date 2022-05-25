@@ -32,3 +32,9 @@ create table nastupanje (
     nastup int not null,
     clan   int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table nastup add foreign key (mjesto) references mjesto(sifra);
+alter table nastupanje add foreign key (nastup) references nastup(sifra);
+alter table nastupanje add foreign key (clan) references clan(sifra);
