@@ -7,7 +7,7 @@ create database kud default charset utf8mb4;
 use kud;
 
 create table clan (
-    sifra   int not null primary key auto_increment
+    sifra   int not null primary key auto_increment,
     ime     varchar(50) not null,
     prezime varchar(50) not null,
     starost int    
