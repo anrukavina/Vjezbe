@@ -20,7 +20,8 @@ create table knjiga (
     ime_autora     varchar(50) not null,
     prezime_autora varchar(50) not null,
     izdavac        varchar(50),
-    posudena       boolean not null
+    posudena       boolean not null,
+    vlasnik        int not null
 );
 
 create table vlasnik (
@@ -35,3 +36,10 @@ create table citanje (
     citatelj int not null,
     knjiga   int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table citanje add foreign key (citatelj) references citatelj(sifra);
+alter table citanje add foreign key (knjiga) references knjiga(sifra);
+alter table knjiga add foreign key (vlasnik) references vlasnik(sifra);
+alter table vlasnik add foreign key (citatelj) references citatelj(sifra);
