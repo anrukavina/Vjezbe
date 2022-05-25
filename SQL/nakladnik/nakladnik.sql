@@ -16,7 +16,7 @@ create table nakladnik (
 create table mjesto (
     sifra          int not null primary key auto_increment,
     naziv          varchar(50) not null,
-    postanski broj varchar(10) not null,
+    postanski_broj varchar(10) not null,
     drzava         varchar(50) default 'Hrvatska'
 );
 
