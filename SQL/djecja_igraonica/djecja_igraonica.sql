@@ -33,3 +33,9 @@ create table igranje (
     dijete  int not null,
     skupina int not null
 );
+
+# definiranje vanjskih ključeva
+
+alter table igranje add foreign key (dijete) references dijete(sifra);
+alter table igranje add foreign key (skupina) references skupina(sifra);
+alter table skupina add foreign key (teta) references teta(sifra);
