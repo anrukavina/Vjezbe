@@ -20,7 +20,7 @@ create table popravak (
     cijena          decimal(18,2),
     broj_popravaka  int,
     vodoinstalater  int not null,
-    šegrt           int not null
+    segrt           int not null
 );
 
 create table kvar (
@@ -44,6 +44,6 @@ create table segrt (
 # definiranje vanjskih ključeva
 
 alter table popravak add foreign key (vodoinstalater) references vodoinstalater(sifra);
-alter table popravak add foreign key (šegrt) references šegrt(sifra);
+alter table popravak add foreign key (segrt) references segrt(sifra);
 alter table popravak_kvar add foreign key (popravak) references popravak(sifra);
 alter table popravak_kvar add foreign key (kvar) references kvar(sifra);
