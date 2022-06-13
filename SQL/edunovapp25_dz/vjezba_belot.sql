@@ -9,8 +9,8 @@ use vjezba_belot;
 create table mjesanje (
     id int not null primary key auto_increment,
     partija int not null,
-    stiglja int not null,
-    belot int not null,
+    stiglja boolean not null,
+    belot boolean not null,
     datumunosa datetime not null,
     vrsta varchar(50) not null,
     bodovaprviunos int,
@@ -45,8 +45,8 @@ create table igrac (
 
 create table lokacija (
     id int not null primary key auto_increment,
-    longitude decimal(18,4) not null,
-    latitude decimal(18,4) not null,
+    longitude decimal(8,5) not null,
+    latitude decimal(8,5) not null,
     naziv varchar(50) not null
 );
 
