@@ -12,8 +12,17 @@
 
   <!-- Body start -->
     <div class="grid-x grid-margin-x" id="body">
-      <div class="cell medium-8 large-12">
-        <div class="primary callout">Welcome to my page, please use Navigation bar!</div>
+      <div class="cell medium-8 large-3">
+        <div class="primary callout">Cell 1</div>
+      </div>
+      <div class="cell medium-8 large-3">
+        <div class="success callout">Cell 2</div>
+      </div>
+      <div class="cell medium-8 large-3">
+        <div class="warning callout">Cell 3</div>
+      </div>
+      <div class="cell medium-8 large-3">
+        <div class="alert callout">Cell 4 </div>
       </div>
     </div>
   <!-- Body end -->
