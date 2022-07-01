@@ -18,13 +18,41 @@
             </ul>
           </li>
           <li>
+            <a href="#">Osnove PHP-a</a>
+            <ul class="menu vertical">
+                <li>
+                    <a href="#">Varijabla i tipovi podataka</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="osnovephp/varijabla.php">Varijable</a></li>
+                        <li><a target="_blank" href="osnovephp/operatori.php">Operatori</a></li>
+                        <li><a target="_blank" href="osnovephp/prviProgram.php">Prvi program</a></li>
+                        <li><a target="_blank" href="vizualniProgram.php">Vizualni program</a></li>
+                        <li><a target="_blank" href="osnovephp/uvjetnoGrananjeIf.php">Uvjetno grananje If</a></li>
+                        <li><a target="_blank" href="osnovephp/uvjetnoGrananjeSwitch.php">Uvjetno grananje Switch</a></li>
+                </ul>
+                </li>
+                <li>
+                    <a href="#">Nizovi i petlje</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="nizoviipetlje/nizovi.php">Nizovi</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/ugradeninizovi.php">Ugrađeni nizovi</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/funkcijenizovi.php">Funkcije za rad s nizovima</a></li>
+                    </ul>
+                </li>
+                </ul>
+          </li>
+          <li>
             <a href="#">Zadaci</a>
             <ul class="menu vertical">
                 <li>
                     <a href="#">Osnove</a>
                     <ul class="menu vertical">
-                        <li><a href="Z01.php">Zadatak 1</a></li>
-                        <li><a href="Z02.php">Zadatak 2</a></li>
+                        <li><a target="_blank" href="Z01.php">Zadatak 1</a></li>
+                        <li><a target="_blank" href="Z02.php">Zadatak 2</a></li>
+                        <li><a target="_blank" href="Z03.php">Zadatak 3</a></li>
+                        <li><a target="_blank" href="Z04.php">Zadatak 4</a></li>
+                        <li><a target="_blank" href="Z05.php">Zadatak 5</a></li>
+                        <li><a target="_blank" href="Z06.php">Zadatak 6</a></li>
                 </ul>
                 </li>
                 </ul>
