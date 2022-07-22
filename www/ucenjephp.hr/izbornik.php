@@ -27,6 +27,7 @@
                         <li><a target="_blank" href="osnovephp/operatori.php">Operatori</a></li>
                         <li><a target="_blank" href="osnovephp/prviProgram.php">Prvi program</a></li>
                         <li><a target="_blank" href="vizualniProgram.php">Vizualni program</a></li>
+                        <li><a target="_blank" href="vizualniProgram1.php">Vizualni program 1</a></li>
                         <li><a target="_blank" href="osnovephp/uvjetnoGrananjeIf.php">Uvjetno grananje If</a></li>
                         <li><a target="_blank" href="osnovephp/uvjetnoGrananjeSwitch.php">Uvjetno grananje Switch</a></li>
                 </ul>
@@ -37,6 +38,24 @@
                         <li><a target="_blank" href="nizoviipetlje/nizovi.php">Nizovi</a></li>
                         <li><a target="_blank" href="nizoviipetlje/ugradeninizovi.php">Ugrađeni nizovi</a></li>
                         <li><a target="_blank" href="nizoviipetlje/funkcijenizovi.php">Funkcije za rad s nizovima</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/forpetlja.php">For petlja</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/whilepetlja.php">While petlja</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/doWhilePetlja.php">Do while petlja</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/foreachpetlja.php">Foreach petlja</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Forme</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="getforma.php">GET forma</a></li>
+                        <li><a target="_blank" href="postforma.php">POST forma</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Funkcije</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="vrstefunkcija.php">Vrste funkcija</a></li>
+                        <li><a target="_blank" href="rekurzija.php">Rekurzija</a></li>
                     </ul>
                 </li>
                 </ul>
@@ -53,6 +72,14 @@
                         <li><a target="_blank" href="Z04.php">Zadatak 4</a></li>
                         <li><a target="_blank" href="Z05.php">Zadatak 5</a></li>
                         <li><a target="_blank" href="Z06.php">Zadatak 6</a></li>
+                        <li><a target="_blank" href="Z07.php">Zadatak 7</a></li>
+                        <li><a target="_blank" href="Z08.php">Zadatak 8</a></li>
+                        <li><a target="_blank" href="Z09.php">Zadatak 9</a></li>
+                        <li><a target="_blank" href="Z10.php">Zadatak 10</a></li>
+                        <li><a target="_blank" href="Z11.php">Zadatak 11</a></li>
+                        <li><a target="_blank" href="Z12.php">Zadatak 12</a></li>
+                        <li><a target="_blank" href="Z13.php">Zadatak 13</a></li>
+                        <li><a target="_blank" href="Z14.php">Zadatak 14</a></li>
                 </ul>
                 </li>
                 </ul>

@@ -19,3 +19,5 @@ switch($grad){
     default:
         echo 'Nepoznato';
 }
+
+?>

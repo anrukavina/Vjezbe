@@ -70,4 +70,4 @@ if(isset($_GET['x'])){
     $x=2;
 }
 // identično gornjih 5 linija koda
-$x = isset($_GET['x']) ? $_GET['x'] : 0; // inline if
+$x = isset($_GET['x']) ? $_GET['x'] : 2; // inline if
