@@ -1,0 +1,88 @@
+.grid-container {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.top-bar,
+.top-bar ul {
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+
+#text {
+    height: 100%;
+}
+
+.cell h4 {
+    padding: 15px 30px;
+}
+
+footer .cell .callout {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgb(161, 156, 156);
+    background-color: rgb(161, 156, 156);
+    color: black;
+}
+
+main .cell .callout {
+    position: relative;
+    text-align: left;
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 0;
+    background-color: rgb(161, 156, 156);
+}
+
+header h4 {
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0.5px 0.5px black;
+}
+
+.top-bar li {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 19px;
+}
+
+.top-bar ul {
+    font-weight: bold;
+}
+
+.dropbtn {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(30, 30, 30);
+}
+
+.dropbtn:hover {
+    opacity: 1;
+}
+
+.button.large {
+    margin: 0rem;
+
+}
+
+div .ulaz {
+    padding: 15px 30px;
+    margin: 0;
+}
