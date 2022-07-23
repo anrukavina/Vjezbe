@@ -59,6 +59,12 @@
                 </ul>
             </li>
             <li>
+                <button class="dropbtn"><a target="_blank" href="#">Ljetna zadaća</a></button>
+                <ul class="menu vertical">
+                    <li><a target="_blank" href="cikličnaMatrica.php">Ciklična matrica</a></li>
+                </ul>
+            </li>
+            <li>
                 <button class="dropbtn"><a target="_blank" href="#">Zadaci</a></button>
                 <ul class="menu vertical">
                     <li><a target="_blank" href="Z01.php">Zadatak 1</a></li>
